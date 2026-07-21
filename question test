@@ -1,0 +1,30 @@
+print('答题闯关')
+question1,ans_1="这是第几题？",1
+question2,ans_2="这是第几题？",2
+question3,ans_3="这是第几题？",3
+tries=1
+for n in range(1,4):
+    if n==1:
+        question,ans=question1,1
+    if n==2:
+        question,ans=question2,2
+    if n==3:
+        question,ans=question3,3
+    print(f"这是第{n}道题")
+
+    while tries<4:
+        Tans = int(input(f"{question},请输入答案："))
+
+        if ans==Tans:
+            print("回答正确恭喜\n")
+            tries=1
+            break
+        elif Tans==9:
+            print("你他妈再试一下\n")
+            continue
+        elif ans!=Tans:
+            print("你他妈的写错了\n")
+            tries+=1
+            continue
+        elif Tans==000:
+            break
